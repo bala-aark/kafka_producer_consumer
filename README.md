@@ -15,13 +15,13 @@
 
 
 #### Steps to verify kafka producer and consumer
-1) Start zookeeper from kafka installation folder
+1) Start zookeeper from kafka installation folder   
 	bin/zookeeper-server-start.sh config/zookeeper.properties
-2) Start kafka server from kafka installation folder
+2) Start kafka server from kafka installation folder   
 	bin/kafka-server-start.sh config/server.properties
-3) Create topic
+3) Create topic   
 	bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1  --partitions 1 --topic <<topic name>>
-4) Start producer from application folder
+4) Start producer from application folder   
 	java -jar build/libs/kafka-consumer-0.1.jar <<topic name>>
-5) Start consumer from application folder
+5) Start consumer from application folder   
 	java -jar build/libs/kafka-producer-0.1.jar <<topic>>
